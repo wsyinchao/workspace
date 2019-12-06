@@ -1,0 +1,6 @@
+*.bat
+*.dll
+*.exe
+ldoc/*
+ldoc.lua
+config*
