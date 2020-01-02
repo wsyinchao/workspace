@@ -1,10 +1,6 @@
 local function receive(prod)
     local ok, sth = coroutine.resume(prod)
-    if ok then 
-        return  sth
-    else 
-        io.write("resume producer error")
-    end
+    return sth
 end
 
 local function send(x)
@@ -13,11 +9,14 @@ end
 
 local function producer()
     return coroutine.create(function()
-        local x = math.random(1, 100)
-        send(x)
+        while true do 
+            local x = math.random(1, 100)
+            send(x)
+        end
     end)
 end
 
+-- It can be producer and consumer at same time.
 local function filter(prod)
     return coroutine.create(function()
         for i = 1, math.huge do 
@@ -29,9 +28,9 @@ local function filter(prod)
 end
 
 local function consumer(prod)
-    while true do 
+    for i = 1, 100 do 
         local x = receive(prod)
-        io.write(x, "\n")
+        print(x)
     end
 end
 
