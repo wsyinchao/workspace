@@ -44,3 +44,6 @@ run(function()
         putline(out, t[i] .. '\n')
     end
 end)
+
+-- print(debug.getinfo(run).activelines)
+-- print(debug.getinfo(run).namewhat)
