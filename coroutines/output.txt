@@ -1,0 +1,32 @@
+lib.runloop()
+lib.readline(inp, getline)
+
+
+end
+    end
+        putline()
+        i = #t + 1
+    else 
+        lib.readline(inp, getline)
+        t[#t + 1] = line
+    if line then 
+local function getline(line)
+-- read-line handler
+
+end
+    end
+        lib.writeline(out, t[i] .. '\n', putline)
+    else 
+        lib.stop()
+    if i == 0 then 
+    i = i - 1
+local function putline()
+-- write-line handler
+
+local i
+local out = io.output("output.txt") -- similar to io.input
+                        -- default input file.
+local inp = io.input("An-ugly-asynchronous-iolib.lua") -- when called without arguments, It returns the current 
+local t = {}
+
+local lib = require "An-ugly-asynchronous-iolib"
